@@ -53,4 +53,70 @@ $border-radius: 20px;
       }
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 100px;
+    }
+
+    .main-poto {
+      height: 500px;
+
+      .texts {
+        margin-top: 300px;
+
+        h2 {
+          font-size: 40px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 80px;
+    }
+
+    .main-poto {
+      height: 400px;
+
+      .texts {
+        margin-top: 200px;
+
+        h2 {
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 60px;
+    }
+
+    .main-poto {
+      height: 300px;
+
+      .texts {
+        margin-top: 150px;
+
+        h2 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }

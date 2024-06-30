@@ -2,108 +2,167 @@ $form-bg-color: #f9f9f9;
 $form-border-color: #ddd;
 $primary-color: #3498db;
 $error-color: #e74c3c;
-.registration{
-    border-top: 1px solid #ddd;
-    margin-top: -10px;
+
+.registration {
+  border-top: 1px solid $form-border-color;
+  margin-top: -10px;
+  display: flex;
+
+  .images {
+    padding-right: 0;
+    margin-right: 0;
     display: flex;
-    .images{
-        padding-right: 0;
-        margin-right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h2{
-            background-color: black;
-            color: #fff;
-            padding: 4px 5px;
-            margin: -24px 0;
-            z-index: 99;
-            font-size: 28px;
-        }
-        div{
-            width: fit-content;
-            display: flex;
-            img{
-                width: 50%;
-            }
-        }
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      background-color: black;
+      color: #fff;
+      padding: 4px 5px;
+      margin: -24px 0;
+      z-index: 99;
+      font-size: 28px;
     }
 
+    div {
+      width: fit-content;
+      display: flex;
 
-    .form {
-    width: 220%;
-    padding: 0 80px;
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  .form {
+    width: 100%; 
+    max-width: 1200px; 
+    padding: 0 40px; 
     display: flex;
     flex-direction: column;
     gap: 60px;
     align-items: center;
 
-    form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .already{
-            font-size: 20px;
-        }
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .already {
+        font-size: 20px;
+      }
     }
-    h2{
-        padding-top: 40px;
-        max-width: 500px;
-        font-size: 54px;
-        font-weight: 500;
-    } 
-    p{
-        max-width: 500px;
-        font-size: 24px;
-        span{
-            font-weight: 600;
-        }
+
+    h2 {
+      padding-top: 40px;
+      max-width: 100%; 
+      font-size: 54px;
+      font-weight: 500;
+
+      @media (max-width: 960px) {
+        font-size: 36px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
     }
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+
+    p {
+      max-width: 100%; 
+      font-size: 24px;
+
+      span {
+        font-weight: 600;
+      }
+
+      @media (max-width: 960px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    input {
+      width: 450px; 
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid $form-border-color;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+      }
+
+      @media (max-width: 960px) {
+        font-size: 0.875rem;
+      }
+    }
+
+    .error-message {
+      color: $error-color;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 960px) {
+        font-size: 0.75rem;
+      }
+    }
+
+    button {
+      width: 50%; 
+      max-width: 500px; 
+      padding: 0.75rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid black;
+      }
+
+      @media (max-width: 960px) {
+        font-size: 0.875rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+      }
+    }
   }
 
-  input {
-    width: 500px;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid $form-border-color;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+  @media (max-width: 960px) {
+    flex-direction: column;
+    align-items: center;
 
-    &:focus {
-      border-color: $primary-color;
-      outline: none;
+    .images {
+      display: none;
+    }
+
+    .form {
+      width: 100%; 
+      max-width: 100%; 
+      padding: 0 20px; 
+      gap: 40px; 
     }
   }
-
-  .error-message {
-    color: $error-color;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-  }
-
-  button {
-    margin-top: 50px;
-    width: 50%;
-    padding: 0.75rem;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-    &:hover {
-      background-color: #fff;
-      color: #000;
-      border: 1px solid black;
-    }
-  }
-}
-
 }

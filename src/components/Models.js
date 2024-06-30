@@ -5,15 +5,48 @@ import { useNavigate } from "react-router-dom";
 
 const Models = ({ images }) => {
   const navigate = useNavigate();
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: determineSlidesToShow(),
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
+
+  function determineSlidesToShow() {
+    if (window.innerWidth >= 1200) {
+      return 3;
+    } else if (window.innerWidth >= 768) {
+      return 2;
+    } else {
+      return 1;
+    }
+  }
+
+  React.useEffect(() => {
+    function handleResize() {
+      settings.slidesToShow = determineSlidesToShow();
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const seeModel = (data) => {
     navigate(`/model-description/${data.model}`);

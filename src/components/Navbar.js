@@ -1,11 +1,19 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "../styles/Navbar.scss";
+
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const storedUser = JSON.parse(localStorage.getItem("user"));
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav>
-      <div className="navigations">
-        <div className="name">
+      <div className={`navigations ${isOpen ? "open" : ""}`}>
+        <div className="nav-item name">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -20,13 +28,9 @@ const Navbar = () => {
               d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
             />
           </svg>
-
-          <h3 className="name">
-            {storedUser.username ? storedUser.username : "My Porsche"}
-          </h3>
+          <h3>{storedUser.username ? storedUser.username : "My Porsche"}</h3>
         </div>
-
-        <div>
+        <div className="nav-item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -45,11 +49,9 @@ const Navbar = () => {
               d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
             />
           </svg>
-
           <h3>Find a Dealer</h3>
         </div>
-
-        <div>
+        <div className="nav-item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -63,13 +65,14 @@ const Navbar = () => {
         </div>
       </div>
 
-      <Link to={"/"}>
-        <img src="./porsche-logo.jpg" alt="logo" />
-      </Link>
+      <div className="logo">
+        <Link to={"/"}>
+          <img src="./porsche-logo.jpg" alt="logo" />
+        </Link>
+      </div>
 
-      <div className="navigations">
-        <div className="placeholder"></div>
-        <div>
+      <div className={`navigations ${isOpen ? "open2" : ""}`}>
+        <div className="nav-item srch">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -79,11 +82,9 @@ const Navbar = () => {
           >
             <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
           </svg>
-
           <h3>Search</h3>
         </div>
-
-        <div>
+        <div className="nav-item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -93,9 +94,14 @@ const Navbar = () => {
           >
             <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V72H40V56Zm0,144H40V88H216V200Zm-40-88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"></path>
           </svg>
-
           <h3>Shop</h3>
         </div>
+      </div>
+
+      <div className="burger" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </nav>
   );

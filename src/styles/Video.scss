@@ -1,4 +1,4 @@
-.video{
+.video {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,11 +6,43 @@
     gap: 40px;
     padding: 60px 40px;
     margin-bottom: 30px;
-    height: 130vh;
-    h2{
-        margin-left: 50px;
-        align-self: self-start;
-        font-size: 42px;
-        font-weight: 500;
+    min-height: 100vh; 
+  }
+  
+  .video h2 {
+    margin-left: 50px;
+    align-self: flex-start;
+    font-size: 42px;
+    font-weight: 500;
+  }
+  
+  iframe {
+    width: 93%;
+    height: 104vh;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .video {
+      padding: 40px 20px;
+      gap: 20px;
     }
-}
+  
+    .video h2 {
+      font-size: 32px;
+    }
+  
+    iframe {
+      height: 50vh; 
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .video h2 {
+      font-size: 28px;
+    }
+  
+    iframe {
+      height: 40vh; 
+    }
+  }
+  

@@ -1,28 +1,123 @@
-nav{
+nav {
     display: flex;
     justify-content: space-between;
-    padding: 15px 60px;
-
-    .navigations{
+    align-items: center;
+    padding: 25px 60px;
+    position: relative;
+  
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      img {
+        width: 200px;
+      }
+    }
+  
+    .navigations {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+  
+      .nav-item {
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 40px;
-        div{
-            width: 150px;
+        gap: 10px;
+  
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  
+    .burger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+  
+      span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: black;
+      }
+    }
+  
+    @media (max-width: 1092px) {
+      padding: 15px 20px;
+  
+      
+      .navigations {
+        display: none;
+  
+        &.open {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          background: white;
+          width: 100%;
+          padding: 15px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          z-index: 1000;
+  
+          .nav-item {
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+          
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+        &.open2 {
             display: flex;
-            gap: 10px;  
-            align-items: center;
-        justify-content: center;
-            
-    }
-    }
-    svg{
-        width: 20px;
-        height: 20px;
-    }
-    img{
-        width: 200px;
-    }
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            top: 245px;
+            left: 0;
+            background: white;
+            width: 100%;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
     
-}
+            .nav-item {
+              flex-direction: row;
+              justify-content: flex-start;
+            }
+            
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+      }
+  
+      .burger {
+        display: flex;
+      }
+  
+      .logo img {
+        width: 150px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .logo img {
+        width: 120px;
+      }
+  
+      .burger span {
+        width: 20px;
+      }
+    }
+  }
+  
