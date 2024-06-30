@@ -1,8 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
 import "../styles/Models.scss";
+import { useNavigate } from "react-router-dom";
 
 const Models = ({ images }) => {
+  const navigate = useNavigate();
   const settings = {
     dots: true,
     infinite: true,
@@ -14,7 +16,7 @@ const Models = ({ images }) => {
   };
 
   const seeModel = (data) => {
-    console.log(data);
+    navigate(`/model-description/${data.model}`);
   };
 
   return (

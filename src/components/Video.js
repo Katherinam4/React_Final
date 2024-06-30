@@ -8,8 +8,8 @@ const Video = () => {
       <iframe
         title="Dailymotion Video Player"
         width="95%"
-        height="1000"
-        src="https://www.dailymotion.com/embed/video/x84vbes?loop=1&autoplay=1"
+        height="100%"
+        src="https://www.dailymotion.com/embed/video/x84vbes?autoplay=1&loop=1&queue-enable=false"
         frameBorder="0"
         allowFullScreen
       ></iframe>
