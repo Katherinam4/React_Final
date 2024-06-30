@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import "../styles/Models.scss";
+
 const Models = ({ images }) => {
   const settings = {
     dots: true,
@@ -12,12 +13,20 @@ const Models = ({ images }) => {
     prevArrow: <SamplePrevArrow />,
   };
 
+  const seeModel = (data) => {
+    console.log(data);
+  };
+
   return (
     <div className="slider">
       <h2>Models</h2>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="carousel-item">
+          <div
+            key={index}
+            className="carousel-item"
+            onClick={() => seeModel(image)}
+          >
             <img src={image.src} alt={image.alt} className="carousel-image" />
             <h3>{image.model}</h3>
             <p>{image.description}</p>
@@ -49,7 +58,7 @@ const SampleNextArrow = (props) => {
       onClick={onClick}
     >
       <i
-        className="fa fa-chevron-left"
+        className="fa fa-chevron-right"
         style={{ color: "#fff", fontSize: "20px" }}
       ></i>
     </div>

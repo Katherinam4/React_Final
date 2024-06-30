@@ -1,0 +1,36 @@
+.interior{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2{
+        padding: 0 50px;
+        font-size: 52px;
+        font-weight: 500;
+    }
+    ul{
+        padding: 0 50px;
+        list-style-type: square;
+        width: 600px;
+        margin-left: 20px;
+    }
+    .photos{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 9px;
+
+        img{
+            width: 33%;
+            cursor: pointer;
+        }
+    }
+    .line{
+        width: 60%;
+        height: 1px;
+        border: 1px solid rgb(108, 108, 108);
+        margin: 30px auto;
+        
+    }
+}

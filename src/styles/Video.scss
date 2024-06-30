@@ -1,0 +1,15 @@
+.video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 40px;
+    margin-bottom: 30px;
+    h2{
+        margin-left: 40px;
+        align-self: self-start;
+        font-size: 42px;
+        font-weight: 500;
+    }
+}

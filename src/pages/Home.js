@@ -1,5 +1,7 @@
 import HeroSection from "../components/HeroSection";
+import Interior from "../components/Interior";
 import Models from "../components/Models";
+import Video from "../components/Video";
 const images = [
   {
     src: "Model1.webp",
@@ -48,6 +50,8 @@ const Home = () => {
     <div>
       <HeroSection></HeroSection>
       <Models images={images}></Models>
+      <Video></Video>
+      <Interior></Interior>
     </div>
   );
 };
