@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
 import "../styles/Navbar.scss";
 const Navbar = () => {
+  const storedUser = JSON.parse(localStorage.getItem("user"));
   return (
     <nav>
       <div className="navigations">
-        <div>
+        <div className="name">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -19,7 +21,9 @@ const Navbar = () => {
             />
           </svg>
 
-          <h3>My Porsche</h3>
+          <h3 className="name">
+            {storedUser.username ? storedUser.username : "My Porsche"}
+          </h3>
         </div>
 
         <div>
@@ -59,7 +63,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      <img src="./porsche-logo.jpg" alt="logo" />
+      <Link to={"/"}>
+        <img src="./porsche-logo.jpg" alt="logo" />
+      </Link>
 
       <div className="navigations">
         <div className="placeholder"></div>
