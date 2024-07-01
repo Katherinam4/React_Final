@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../styles/Navbar.scss";
+import useDarkMode from "../hooks/useDarkMode";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const storedUser = JSON.parse(localStorage.getItem("user"));
+  const [darkMode, setDarkMode] = useDarkMode();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -67,11 +69,22 @@ const Navbar = () => {
 
       <div className="logo">
         <Link to={"/"}>
-          <img src="./porsche-logo.jpg" alt="logo" />
+          <img
+            src="https://i.pinimg.com/originals/9b/f2/2d/9bf22d212a641ade7f71f6b9fbd11c88.png"
+            alt="logo"
+          />
         </Link>
       </div>
 
       <div className={`navigations ${isOpen ? "open2" : ""}`}>
+        <div className="nav-item">
+          <button
+            className="dark-button"
+            onClick={() => setDarkMode(!darkMode)}
+          >
+            {darkMode ? "Switch to Light Mode 🌞" : "Switch to Dark Mode 🌙"}
+          </button>
+        </div>
         <div className="nav-item srch">
           <svg
             xmlns="http://www.w3.org/2000/svg"

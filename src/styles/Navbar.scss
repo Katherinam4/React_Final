@@ -2,7 +2,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 60px;
+    padding: 30px 60px;
     position: relative;
   
     .logo {
@@ -25,6 +25,13 @@ nav {
         align-items: center;
         gap: 10px;
         cursor: pointer;
+        .dark-button{
+          padding: 5px;
+          border-radius: 10px;
+          background-color: #818181;
+          border: none;
+          color: #fff;
+        }
   
         svg {
           width: 20px;
