@@ -5,7 +5,6 @@ export const useAuth = () => {
 
   useEffect(() => {
     const isAuth = JSON.parse(localStorage.getItem("isAuthenticated"));
-    console.log("Value from localStorage:", isAuth);
     if (isAuth) {
       setIsAuthenticated(true);
     } else {
@@ -13,6 +12,5 @@ export const useAuth = () => {
     }
   }, []);
 
-  console.log("isAuthenticated state:", isAuthenticated);
   return isAuthenticated;
 };

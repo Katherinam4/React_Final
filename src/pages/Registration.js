@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion"; // Import motion from Framer Motion
+import { motion } from "framer-motion";
 import "../styles/Registration.scss";
 
 const schema = yup.object().shape({
@@ -29,8 +29,8 @@ const Registration = ({ setIsRegistered }) => {
       "user",
       JSON.stringify({ username: data.username, password: data.password })
     );
-    localStorage.setItem("isAuthenticated", true);
-    navigate("/");
+    localStorage.setItem("isAuthenticated", false);
+    navigate("/login");
   };
 
   return (

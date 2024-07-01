@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Porsche Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a website dedicated to Porsche cars, built with React and SCSS. It showcases various Porsche models, allows users to find perfect car, and includes a dark mode feature for better user experience. The project integrates firebase for information and photos about Porsche. It uses React Router for navigation and React Hook Form for handling forms, with Yup for form validation. Animations are implemented using the Framer Motion library.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Contact](#contact)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Responsive Design**: The website is fully responsive and works on all device sizes.
+- **Dark Mode**: Users can toggle between light and dark mode.
+- **Dynamic Content**: Fetches car information and photos using external APIs.
+- **User Authentication**: Basic user authentication using local storage.
+- **Navigation**: Includes a navbar with a burger menu for smaller screens.
+- **Form Handling**: User forms with validation using React Hook Form and Yup.
+- **Smooth Animations**: Implemented using the Framer Motion library.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **Frontend**: React, SCSS, Framer Motion
+- **APIs**: Firebase
+- **State Management**: React hooks, custom hooks
+- **Routing**: React Router
+- **Form Handling**: React Hook Form, Yup for validation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js
+- npm or yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Steps
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/Katherinam4/React_Final.git
+    ```
 
-### `npm run eject`
+2. **Navigate to the project directory**:
+    ```sh
+    cd React-Final
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Install dependencies**:
+    ```sh
+    npm install
+    # or
+    yarn install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Start the development server**:
+    ```sh
+    npm start
+    # or
+    yarn start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Homepage**: Displays a hero section, featured models, and an interior.
+- **Model Details**: Shows detailed information about a specific Porsche model.
+- **Dark Mode**: Toggle between light and dark mode using the button in the navbar.
 
-## Learn More
+## Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Homepage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Homepage](https://i.ibb.co/QvfM6Rj/image.png)
 
-### Code Splitting
+### Model Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Model Details](https://i.ibb.co/NnkhC1v/image.png)
 
-### Analyzing the Bundle Size
+### Dark Mode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Dark Mode](https://i.ibb.co/0MhJxtp/image.png)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contact
 
-### Advanced Configuration
+- **Email**: ekaterine.mashchenko.1@btu.edu.ge
+- **GitHub**: [Katherinam4](https://github.com/Katherinam4)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

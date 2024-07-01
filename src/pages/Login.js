@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { motion } from "framer-motion"; // Import motion from Framer Motion
+import { motion } from "framer-motion";
 import "../styles/Login.scss";
 
 const schema = yup.object().shape({
@@ -24,8 +24,8 @@ const Login = ({ setIsLoggedIn }) => {
   const onSubmit = (data) => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (
-      data.username === storedUser.username &&
-      data.password === storedUser.password
+      data.username === storedUser?.username &&
+      data.password === storedUser?.password
     ) {
       localStorage.setItem("isAuthenticated", JSON.stringify(true));
       setIsLoggedIn(true);
