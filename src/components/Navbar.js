@@ -13,6 +13,11 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const logout = () => {
+    localStorage.removeItem("isAuthenticated");
+    window.location.reload();
+  };
+
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser?.username && isAuthenticated) {
@@ -39,7 +44,7 @@ const Navbar = () => {
       <div
         className={`navigations ${isOpen ? "open" : ""}`}
         style={{
-          backgroundColor: darkMode && isOpen ? "black" : "white",
+          backgroundColor: darkMode && isOpen ? "black" : "",
         }}
       >
         <div className="nav-item name">
@@ -106,7 +111,7 @@ const Navbar = () => {
       <div
         className={`navigations ${isOpen ? "open2" : ""}`}
         style={{
-          backgroundColor: darkMode && isOpen ? "black" : "white",
+          backgroundColor: darkMode && isOpen ? "black" : "",
         }}
       >
         <div className="nav-item srch">
@@ -121,24 +126,26 @@ const Navbar = () => {
           </svg>
           <h3>Search</h3>
         </div>
-        <div className="nav-item">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill=""
-            viewBox="0 0 256 256"
-          >
-            <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V72H40V56Zm0,144H40V88H216V200Zm-40-88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"></path>
-          </svg>
-          <h3>Shop</h3>
-        </div>
+        {isAuthenticated && (
+          <div className="nav-item" onClick={logout}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill=""
+              viewBox="0 0 256 256"
+            >
+              <path d="M120,216a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V40a8,8,0,0,1,8-8h64a8,8,0,0,1,0,16H56V208h56A8,8,0,0,1,120,216Zm109.66-93.66-40-40a8,8,0,0,0-11.32,11.32L204.69,120H112a8,8,0,0,0,0,16h92.69l-26.35,26.34a8,8,0,0,0,11.32,11.32l40-40A8,8,0,0,0,229.66,122.34Z"></path>
+            </svg>
+            <h3>Log Out</h3>
+          </div>
+        )}
         <div className="nav-item">
           <button
             className="dark-button"
             onClick={() => setDarkMode(!darkMode)}
           >
-            {darkMode ? "Switch to Light Mode 🌞" : "Switch to Dark Mode 🌙"}
+            {darkMode ? "Light Mode" : "Dark Mode"}
           </button>
         </div>
       </div>

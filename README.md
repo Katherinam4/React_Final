@@ -39,28 +39,31 @@ This project is a website dedicated to Porsche cars, built with React and SCSS. 
 ### Steps
 
 1. **Clone the repository**:
-    ```sh
-    git clone https://github.com/Katherinam4/React_Final.git
-    ```
+
+   ```sh
+   git clone https://github.com/Katherinam4/React_Final.git
+   ```
 
 2. **Navigate to the project directory**:
-    ```sh
-    cd React-Final
-    ```
+
+   ```sh
+   cd React-Final
+   ```
 
 3. **Install dependencies**:
-    ```sh
-    npm install
-    # or
-    yarn install
-    ```
+
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
 
 4. **Start the development server**:
-    ```sh
-    npm start
-    # or
-    yarn start
-    ```
+   ```sh
+   npm start
+   # or
+   yarn start
+   ```
 
 ## Usage
 
@@ -72,7 +75,7 @@ This project is a website dedicated to Porsche cars, built with React and SCSS. 
 
 ### Homepage
 
-![Homepage](https://i.ibb.co/QvfM6Rj/image.png)
+![Homepage](https://i.ibb.co/rb3147j/image.png)
 
 ### Model Details
 
@@ -80,11 +83,9 @@ This project is a website dedicated to Porsche cars, built with React and SCSS. 
 
 ### Dark Mode
 
-![Dark Mode](https://i.ibb.co/0MhJxtp/image.png)
-
+![Dark Mode](https://i.ibb.co/fSgHrPK/image.png)
 
 ## Contact
 
 - **Email**: ekaterine.mashchenko.1@btu.edu.ge
 - **GitHub**: [Katherinam4](https://github.com/Katherinam4)
-

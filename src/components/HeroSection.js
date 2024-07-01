@@ -53,7 +53,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 2, ease: "easeOut" }}
           >
-            The New Carerra 4S
+            The New Carrera 4S
           </motion.p>
         </motion.div>
       </motion.div>
