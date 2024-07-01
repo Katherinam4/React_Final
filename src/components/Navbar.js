@@ -36,7 +36,12 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className={`navigations ${isOpen ? "open" : ""}`}>
+      <div
+        className={`navigations ${isOpen ? "open" : ""}`}
+        style={{
+          backgroundColor: darkMode && isOpen ? "black" : "white",
+        }}
+      >
         <div className="nav-item name">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +103,12 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className={`navigations ${isOpen ? "open2" : ""}`}>
+      <div
+        className={`navigations ${isOpen ? "open2" : ""}`}
+        style={{
+          backgroundColor: darkMode && isOpen ? "black" : "white",
+        }}
+      >
         <div className="nav-item srch">
           <svg
             xmlns="http://www.w3.org/2000/svg"

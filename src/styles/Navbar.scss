@@ -68,11 +68,12 @@ nav {
           position: absolute;
           top: 60px;
           left: 0;
-          background: white;
+          background: #fff;
           width: 100%;
           padding: 15px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          z-index: 1000;
+          // z-index: 1000;
+          
   
           .nav-item {
             flex-direction: row;
@@ -91,11 +92,11 @@ nav {
             position: absolute;
             top: 243px;
             left: 0;
-            background: white;
+            background: #fff;
             width: 100%;
             padding: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
+            // z-index: 1000;
     
             .nav-item {
               flex-direction: row;
@@ -110,6 +111,8 @@ nav {
       }
   
       .burger {
+        background-color: white;
+        padding: 5px 0;
         display: flex;
       }
   

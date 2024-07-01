@@ -26,6 +26,11 @@ $error-color: #e74c3c;
 
     padding: 30px;
 
+    .donthave{
+      min-width: 300px;
+      text-align: center;
+    }
+
     div{
         width: 80%;
         display: flex;
@@ -46,6 +51,7 @@ $error-color: #e74c3c;
     }
 
     input {
+      min-width: 300px;
       width: 100%;
       padding: 0.5rem;
       margin-bottom: 1rem;
@@ -67,6 +73,7 @@ $error-color: #e74c3c;
     }
 
     button {
+      min-width: 200px;
       width: 50%;
       max-width: 500px;
       padding: 0.75rem;

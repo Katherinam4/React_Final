@@ -98,7 +98,7 @@ const Login = ({ setIsLoggedIn }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.0 }}
-          className="already"
+          className="donthave"
         >
           Dont have an account? <Link to={"/registration"}>Register</Link>
         </motion.p>
