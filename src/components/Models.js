@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "../styles/Models.scss";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Models = ({ images }) => {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ const Models = ({ images }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: determineSlidesToShow(),
+    slidesToShow: 3,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -40,7 +40,7 @@ const Models = ({ images }) => {
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     function handleResize() {
       settings.slidesToShow = determineSlidesToShow();
     }

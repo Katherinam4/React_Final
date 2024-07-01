@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { motion } from "framer-motion"; // Import motion from Framer Motion
 import "../styles/Login.scss";
 
 const schema = yup.object().shape({
@@ -35,39 +36,82 @@ const Login = ({ setIsLoggedIn }) => {
   };
 
   return (
-    <div className="login">
-      <img
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="login"
+    >
+      <motion.img
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
         className="cover"
         src="https://i.pinimg.com/originals/bb/d4/9d/bbd49d849716ce6d569ec445569c0d45.jpg"
         alt="porsche"
       />
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <img
+      <motion.form
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
           src="https://assets.identity.porsche.com/img/logo.png"
           alt="porsche"
         />
-        <h2>Welcome</h2>
-        <div>
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+        >
+          Welcome
+        </motion.h2>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+        >
           <label>Username</label>
           <input type="text" {...register("username")} />
           {errors.username && (
             <p className="error-message">{errors.username.message}</p>
           )}
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+        >
           <label>Password</label>
           <input type="password" {...register("password")} />
           {errors.password && (
             <p className="error-message">{errors.password.message}</p>
           )}
-        </div>
-        <p className="already">
+        </motion.div>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.0 }}
+          className="already"
+        >
           Dont have an account? <Link to={"/registration"}>Register</Link>
-        </p>
-        <button type="submit">Login</button>
-      </form>
-    </div>
+        </motion.p>
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+          type="submit"
+        >
+          Login
+        </motion.button>
+      </motion.form>
+    </motion.div>
   );
 };
 
